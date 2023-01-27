@@ -25,3 +25,9 @@ let a = 100;
 let b = '100';
 let c = true;
 console.log(typeof a,typeof b,typeof c);
+
+let f_name = prompt('Enter Name: ');
+let m_name = prompt('Enter Middle Name: ');
+let l_name = prompt('Last Name: ');
+console.log(f_name + space + m_name + space + l_name);
+
