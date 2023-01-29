@@ -23,18 +23,33 @@ let v_object = {
   title : 'JujutsuKaisen',
   pageCount : 982,
   genre : 'SF',
-  authors : ['name','age']
+  authors : [
+    {
+      Name : 'Robert',
+      Age : 47
+    }
+  ]
 }
 let x_object = {
   title : 'RockPaperScissors',
   pageCount : 27,
   genre : 'Games',
-  authors : ['name','age']
+  authors : [
+    {
+      Name : 'Alex',
+      Age : 32
+    }
+  ]
 }
 let n_object = {
   title : 'クソ野郎',
   pageCount : 2540,
-  genre : 'Drama',
+  authors : [
+    {
+      Name : 'Alan',
+      Age : 62
+    }
+  ]
 }
 console.log(v_object,x_object,n_object);
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
