@@ -361,4 +361,22 @@ let masAnime = [
 // }
 // console.log(`Max Name : ${masAnime[maxNme].name} - ${masAnime[maxNme].name.length}`);
 //----------------------------------------------------------
+// - знайти книжку/ки які писали 2 автори
+//----------------------------------------------------------
+// let maxAth = 0;
+// for (let i = 0; i < masAnime.length; i++) {
+//     if (masAnime[i].author.length > masAnime[maxAth].author.length) {
+//         maxAth = i;
+//     }
+// }
+// console.log(`Max Authors : ${masAnime[maxAth].name} - ${masAnime[maxAth].author.length}(${masAnime[maxAth].author})`);
+//----------------------------------------------------------
+// - знайти книжку/ки які писав 1 автор
+//----------------------------------------------------------
+// let mainAth = 0;
+// for (let i = 0; i < mainAth.length; i++) {
+//     if (masAnime[i].author.length === 1) {
+//         mainAth[i] = i;
+//     }
+// }
 //----------------------------------------------------------------------------------------------------------------------
