@@ -298,38 +298,38 @@
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
 //----------------------------------------------------------------------------------------------------------------------
-let masAnime = [
-    {
-        name: 'Fairy Tail',
-        pages: 328,
-        author: ['Hiro Mashima'],
-        genre: ['Adventures', 'Comedy']
-    },
-    {
-        name: 'One Piece',
-        pages: 1047,
-        author: ['Eiichiro Oda', 'Oda`s students'],
-        genre: ['Adventures', 'Drama', 'Fantasy']
-    },
-    {
-        name: 'Naruto',
-        pages: 720,
-        author: ['Masashi Kishimoto'],
-        genre: ['Action', 'Shonen', 'Martial arts', 'Adventures']
-    },
-    {
-        name: 'Steins Gate',
-        pages: 52,
-        author: ['Yomi Sarachi'],
-        genre: ['Visual novel', 'Adventure video game']
-    },
-    {
-        name: 'Golden Time',
-        pages: 24,
-        author: ['Yuyuko Takemiya'],
-        genre: ['Comedy', 'Drama', 'Romance']
-    }
-]
+// let masAnime = [
+//     {
+//         name: 'Fairy Tail',
+//         pages: 328,
+//         author: ['Hiro Mashima'],
+//         genre: ['Adventures', 'Comedy']
+//     },
+//     {
+//         name: 'One Piece',
+//         pages: 1047,
+//         author: ['Eiichiro Oda', 'Oda`s students'],
+//         genre: ['Adventures', 'Drama', 'Fantasy']
+//     },
+//     {
+//         name: 'Naruto',
+//         pages: 720,
+//         author: ['Masashi Kishimoto'],
+//         genre: ['Action', 'Shonen', 'Martial arts', 'Adventures']
+//     },
+//     {
+//         name: 'Steins Gate',
+//         pages: 52,
+//         author: ['Yomi Sarachi'],
+//         genre: ['Visual novel', 'Adventure video game']
+//     },
+//     {
+//         name: 'Golden Time',
+//         pages: 24,
+//         author: ['Yuyuko Takemiya'],
+//         genre: ['Comedy', 'Drama', 'Romance']
+//     }
+// ]
 //----------------------------------------------------------
 // -знайти найбільшу книжку.
 //----------------------------------------------------------
@@ -372,11 +372,10 @@ let masAnime = [
 // console.log(`Max Authors : ${masAnime[maxAth].name} - ${masAnime[maxAth].author.length}(${masAnime[maxAth].author})`);
 //----------------------------------------------------------
 // - знайти книжку/ки які писав 1 автор
-//----------------------------------------------------------
-// let mainAth = 0;
-// for (let i = 0; i < mainAth.length; i++) {
+//----------------------------------------------------------;
+// for (let i = 0; i < masAnime.length; i++) {
 //     if (masAnime[i].author.length === 1) {
-//         mainAth[i] = i;
+//         console.log(masAnime[i]);
 //     }
 // }
 //----------------------------------------------------------------------------------------------------------------------
