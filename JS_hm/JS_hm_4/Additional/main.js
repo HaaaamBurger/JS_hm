@@ -291,3 +291,74 @@
 //     document.write(`|№ - ${i}`);
 // }
 //----------------------------------------------------------------------------------------------------------------------
+// стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+// -знайти наібльшу книжку.
+// - знайти книжку/ки з найбільшою кількістю жанрів
+// - знайти книжку/ки з найдовшою назвою
+// - знайти книжку/ки які писали 2 автори
+// - знайти книжку/ки які писав 1 автор
+//----------------------------------------------------------------------------------------------------------------------
+let masAnime = [
+    {
+        name: 'Fairy Tail',
+        pages: 328,
+        author: ['Hiro Mashima'],
+        genre: ['Adventures', 'Comedy']
+    },
+    {
+        name: 'One Piece',
+        pages: 1047,
+        author: ['Eiichiro Oda', 'Oda`s students'],
+        genre: ['Adventures', 'Drama', 'Fantasy']
+    },
+    {
+        name: 'Naruto',
+        pages: 720,
+        author: ['Masashi Kishimoto'],
+        genre: ['Action', 'Shonen', 'Martial arts', 'Adventures']
+    },
+    {
+        name: 'Steins Gate',
+        pages: 52,
+        author: ['Yomi Sarachi'],
+        genre: ['Visual novel', 'Adventure video game']
+    },
+    {
+        name: 'Golden Time',
+        pages: 24,
+        author: ['Yuyuko Takemiya'],
+        genre: ['Comedy', 'Drama', 'Romance']
+    }
+]
+//----------------------------------------------------------
+// -знайти найбільшу книжку.
+//----------------------------------------------------------
+// let maxPgs = 0;
+// for (let i = 0; i < masAnime.length; i++) {
+//     if (masAnime[i].pages > masAnime[maxPgs].pages) {
+//         maxPgs = i;
+//     }
+// }
+// console.log(`Max Episodes : ${masAnime[maxPgs].name} - ${masAnime[maxPgs].pages}`);
+//----------------------------------------------------------
+// - знайти книжку/ки з найбільшою кількістю жанрів
+//----------------------------------------------------------
+// let maxGnr = 0;
+// for (let i = 0; i < masAnime.length; i++) {
+//     if (masAnime[i].genre.length > masAnime[maxGnr].genre.length) {
+//         maxGnr = i;
+//     }
+// }
+// console.log(`Max Genres : ${masAnime[maxGnr].name} - ${masAnime[maxGnr].genre.length}(${masAnime[maxGnr].genre})`);
+//----------------------------------------------------------
+// - знайти книжку/ки з найдовшою назвою
+//----------------------------------------------------------
+// let maxNme = 0;
+// for (let i = 0; i < masAnime.length; i++) {
+//     if (masAnime[i].name.length > masAnime[maxNme].name.length) {
+//         maxNme = i;
+//     }
+// }
+// console.log(`Max Name : ${masAnime[maxNme].name} - ${masAnime[maxNme].name.length}`);
+//----------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
