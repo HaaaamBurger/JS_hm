@@ -1,0 +1,36 @@
+p{
+    margin: 0;
+}
+h2,h3{
+    color: #4c4747;
+    font-family: "Book Antiqua";
+    margin: 0;
+}
+.user-block{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.users-box {
+    width: 100%;
+}
+.user-info {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid black;
+    border-right: none;
+}
+.address-block {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border: 2px solid black;
+    border-left: dashed;
+}
+.address-block p {
+    color: #345a5a;
+    font-size: 19px;
+    font-family: "Kalam";
+}
