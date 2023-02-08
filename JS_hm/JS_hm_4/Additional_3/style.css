@@ -1,0 +1,18 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 5;
+    justify-content: center;
+    column-gap: 20px;
+}
+.post-card {
+    width: 200px;
+    height: 300px;
+}
+h3 {
+    color: coral;
+}
+p {
+    color: orange;
+}
