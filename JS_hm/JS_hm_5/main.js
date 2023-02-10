@@ -102,34 +102,51 @@
 //----------------------------------------------------------------------------------------------------------------------
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 //----------------------------------------------------------------------------------------------------------------------
-let users = [
-    {
-        id: 0,
-        name: 'Naomi',
-        age: 19
-    },
-    {
-        id: 1,
-        name: 'Tanaka',
-        age: 38
-    },
-    {
-        id: 2,
-        name: 'Yukiko',
-        age: 49,
-    },
-    {
-        id: 3,
-        name: 'Sayaka',
-        age: 23
-    }
-]
-function userInfo(array) {
-    for (let userArr of array) {
-        for (let field in userArr) {
-            document.write(`<div class = "item">${field} : ${userArr[field]}</div>`);
-        }
-    }
-}
-userInfo(users);
+// let users = [
+//     {
+//         id: 0,
+//         name: 'Naomi',
+//         age: 19
+//     },
+//     {
+//         id: 1,
+//         name: 'Tanaka',
+//         age: 38
+//     },
+//     {
+//         id: 2,
+//         name: 'Yukiko',
+//         age: 49,
+//     },
+//     {
+//         id: 3,
+//         name: 'Sayaka',
+//         age: 23
+//     }
+// ]
+// function userInfo(array) {
+//     for (let userArr of array) {
+//         document.write(`<div class="wrapper">`);
+//         for (let field in userArr) {
+//             document.write(`<div class = "item"><ul><li>${field} : ${userArr[field]}</li></ul></div>`);
+//         }
+//         document.write(`</div>`);
+//     }
+// }
+// userInfo(users);
+//----------------------------------------------------------------------------------------------------------------------
+// - створити функцію яка повертає найменьше число з масиву
+//----------------------------------------------------------------------------------------------------------------------
+// let main = [354, 23, 576, 4, 1426, 8, 65, 12, 86, 38924];
+// let minNumber = main[0];
+// function smallValue(array) {
+//     for (let item of array) {
+//         if (item < minNumber) {
+//             minNumber = item;
+//         }
+//     }
+//     return minNumber;
+// }
+// smallValue(main);
+// console.log(minNumber);
 //----------------------------------------------------------------------------------------------------------------------
