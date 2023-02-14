@@ -145,5 +145,67 @@
 //     color:'', // 'red','black'
 // }
 //----------------------------------------------------------------------------------------------------------------------
-
+let cards = [
+    {cardSuit : 'Spade',value : '6', color : 'black'},
+    {cardSuit : 'Diamond',value : '6', color : 'red'},
+    {cardSuit : 'Heart',value : '6', color : 'red'},
+    {cardSuit : 'Clubs',value : '6', color : 'black'},
+    {cardSuit : 'Spade',value : '7', color : 'black'},
+    {cardSuit : 'Diamond',value : '7', color : 'red'},
+    {cardSuit : 'Heart',value : '7', color : 'red'},
+    {cardSuit : 'Clubs',value : '7', color : 'black'},
+    {cardSuit : 'Spade',value : '8', color : 'black'},
+    {cardSuit : 'Diamond',value : '8', color : 'red'},
+    {cardSuit : 'Heart',value : '8', color : 'red'},
+    {cardSuit : 'Clubs',value : '8', color : 'black'},
+    {cardSuit : 'Spade',value : '9', color : 'black'},
+    {cardSuit : 'Diamond',value : '9', color : 'red'},
+    {cardSuit : 'Heart',value : '9', color : 'red'},
+    {cardSuit : 'Clubs',value : '9', color : 'black'},
+    {cardSuit : 'Spade',value : '10', color : 'black'},
+    {cardSuit : 'Diamond',value : '10', color : 'red'},
+    {cardSuit : 'Heart',value : '10', color : 'red'},
+    {cardSuit : 'Clubs',value : '10', color : 'black'},
+    {cardSuit : 'Spade',value : 'Jack', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Jack', color : 'red'},
+    {cardSuit : 'Heart',value : 'Jack', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Jack', color : 'black'},
+    {cardSuit : 'Spade',value : 'Queen', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Queen', color : 'red'},
+    {cardSuit : 'Heart',value : 'Queen', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Queen', color : 'black'},
+    {cardSuit : 'Spade',value : 'King', color : 'black'},
+    {cardSuit : 'Diamond',value : 'King', color : 'red'},
+    {cardSuit : 'Heart',value : 'King', color : 'red'},
+    {cardSuit : 'Clubs',value : 'King', color : 'black'},
+    {cardSuit : 'Spade',value : 'Ace', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Ace', color : 'red'},
+    {cardSuit : 'Heart',value : 'Ace', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Ace', color : 'black'},
+]
+//----------------------------------------------------------------------------------------------------------------------
+// - знайти піковий туз
+//----------------------------------------------------------------------------------------------------------------------
+// let spadeAce = cards.find(array => array.cardSuit === 'Spade' && array.value === 'Ace');
+// console.log(spadeAce);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі шістки
+//----------------------------------------------------------------------------------------------------------------------
+// let sixFind = cards.filter(value => value.value === '6');
+// console.log(sixFind);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі червоні карти
+//----------------------------------------------------------------------------------------------------------------------
+// let allRed = cards.filter(value => value.color === 'red');
+// console.log(allRed);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі буби
+//----------------------------------------------------------------------------------------------------------------------
+// let allSpade = cards.filter(value => value.cardSuit === 'Spade');
+// console.log(allSpade);
+//----------------------------------------------------------------------------------------------------------------------
+// - всі трефи від 9 та більше
+//----------------------------------------------------------------------------------------------------------------------
+// let allSpadeNine = cards.filter(value => value.cardSuit === 'Clubs' && value.value >= '9');
+// console.log(allSpadeNine);
 //----------------------------------------------------------------------------------------------------------------------
