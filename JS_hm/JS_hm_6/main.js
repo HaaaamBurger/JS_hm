@@ -218,58 +218,58 @@
 //     clubs:[]
 // }
 //----------------------------------------------------------------------------------------------------------------------
-// let cards = [
-//     {cardSuit : 'Spade',value : '6', color : 'black'},
-//     {cardSuit : 'Diamond',value : '6', color : 'red'},
-//     {cardSuit : 'Heart',value : '6', color : 'red'},
-//     {cardSuit : 'Clubs',value : '6', color : 'black'},
-//     {cardSuit : 'Spade',value : '7', color : 'black'},
-//     {cardSuit : 'Diamond',value : '7', color : 'red'},
-//     {cardSuit : 'Heart',value : '7', color : 'red'},
-//     {cardSuit : 'Clubs',value : '7', color : 'black'},
-//     {cardSuit : 'Spade',value : '8', color : 'black'},
-//     {cardSuit : 'Diamond',value : '8', color : 'red'},
-//     {cardSuit : 'Heart',value : '8', color : 'red'},
-//     {cardSuit : 'Clubs',value : '8', color : 'black'},
-//     {cardSuit : 'Spade',value : '9', color : 'black'},
-//     {cardSuit : 'Diamond',value : '9', color : 'red'},
-//     {cardSuit : 'Heart',value : '9', color : 'red'},
-//     {cardSuit : 'Clubs',value : '9', color : 'black'},
-//     {cardSuit : 'Spade',value : '10', color : 'black'},
-//     {cardSuit : 'Diamond',value : '10', color : 'red'},
-//     {cardSuit : 'Heart',value : '10', color : 'red'},
-//     {cardSuit : 'Clubs',value : '10', color : 'black'},
-//     {cardSuit : 'Spade',value : 'Jack', color : 'black'},
-//     {cardSuit : 'Diamond',value : 'Jack', color : 'red'},
-//     {cardSuit : 'Heart',value : 'Jack', color : 'red'},
-//     {cardSuit : 'Clubs',value : 'Jack', color : 'black'},
-//     {cardSuit : 'Spade',value : 'Queen', color : 'black'},
-//     {cardSuit : 'Diamond',value : 'Queen', color : 'red'},
-//     {cardSuit : 'Heart',value : 'Queen', color : 'red'},
-//     {cardSuit : 'Clubs',value : 'Queen', color : 'black'},
-//     {cardSuit : 'Spade',value : 'King', color : 'black'},
-//     {cardSuit : 'Diamond',value : 'King', color : 'red'},
-//     {cardSuit : 'Heart',value : 'King', color : 'red'},
-//     {cardSuit : 'Clubs',value : 'King', color : 'black'},
-//     {cardSuit : 'Spade',value : 'Ace', color : 'black'},
-//     {cardSuit : 'Diamond',value : 'Ace', color : 'red'},
-//     {cardSuit : 'Heart',value : 'Ace', color : 'red'},
-//     {cardSuit : 'Clubs',value : 'Ace', color : 'black'},
-// ]
-// let reduceSuits = cards.reduce(function (accumulator,user) {
-//     if (user.cardSuit === 'Spade') {
-//         accumulator.spades.push(user);
-//     }
-//     if(user.cardSuit === 'Diamond') {
-//         accumulator.diamonds.push(user);
-//     }
-//     if(user.cardSuit === 'Heart') {
-//         accumulator.hearts.push(user);
-//     }
-//     if(user.cardSuit === 'Clubs') {
-//         accumulator.clubs.push(user);
-//     }
-//     return accumulator;
-// },{spades:[], diamonds:[], hearts:[], clubs:[]});
-// console.log(reduceSuits);
+let cards = [
+    {cardSuit : 'Spade',value : '6', color : 'black'},
+    {cardSuit : 'Diamond',value : '6', color : 'red'},
+    {cardSuit : 'Heart',value : '6', color : 'red'},
+    {cardSuit : 'Clubs',value : '6', color : 'black'},
+    {cardSuit : 'Spade',value : '7', color : 'black'},
+    {cardSuit : 'Diamond',value : '7', color : 'red'},
+    {cardSuit : 'Heart',value : '7', color : 'red'},
+    {cardSuit : 'Clubs',value : '7', color : 'black'},
+    {cardSuit : 'Spade',value : '8', color : 'black'},
+    {cardSuit : 'Diamond',value : '8', color : 'red'},
+    {cardSuit : 'Heart',value : '8', color : 'red'},
+    {cardSuit : 'Clubs',value : '8', color : 'black'},
+    {cardSuit : 'Spade',value : '9', color : 'black'},
+    {cardSuit : 'Diamond',value : '9', color : 'red'},
+    {cardSuit : 'Heart',value : '9', color : 'red'},
+    {cardSuit : 'Clubs',value : '9', color : 'black'},
+    {cardSuit : 'Spade',value : '10', color : 'black'},
+    {cardSuit : 'Diamond',value : '10', color : 'red'},
+    {cardSuit : 'Heart',value : '10', color : 'red'},
+    {cardSuit : 'Clubs',value : '10', color : 'black'},
+    {cardSuit : 'Spade',value : 'Jack', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Jack', color : 'red'},
+    {cardSuit : 'Heart',value : 'Jack', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Jack', color : 'black'},
+    {cardSuit : 'Spade',value : 'Queen', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Queen', color : 'red'},
+    {cardSuit : 'Heart',value : 'Queen', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Queen', color : 'black'},
+    {cardSuit : 'Spade',value : 'King', color : 'black'},
+    {cardSuit : 'Diamond',value : 'King', color : 'red'},
+    {cardSuit : 'Heart',value : 'King', color : 'red'},
+    {cardSuit : 'Clubs',value : 'King', color : 'black'},
+    {cardSuit : 'Spade',value : 'Ace', color : 'black'},
+    {cardSuit : 'Diamond',value : 'Ace', color : 'red'},
+    {cardSuit : 'Heart',value : 'Ace', color : 'red'},
+    {cardSuit : 'Clubs',value : 'Ace', color : 'black'},
+]
+let reduceSuits = cards.reduce((accumulator,user) => {
+    if (user.cardSuit === 'Spade') {
+        accumulator.spades.push(user);
+    }
+    if(user.cardSuit === 'Diamond') {
+        accumulator.diamonds.push(user);
+    }
+    if(user.cardSuit === 'Heart') {
+        accumulator.hearts.push(user);
+    }
+    if(user.cardSuit === 'Clubs') {
+        accumulator.clubs.push(user);
+    }
+    return accumulator;
+},{spades:[], diamonds:[], hearts:[], clubs:[]});
+console.log(reduceSuits);
 //----------------------------------------------------------------------------------------------------------------------
