@@ -1,28 +1,82 @@
-function userCard(key,balance = 0,transactionLimit = 0,historyLogs = []) {
-    let mainUser = {key,balance,transactionLimit,historyLogs}
+function userCard(key, balance = 0, transactionLimit = 100, historyLogs = []) {
     return {
-        getCardOptions(){
+        getCardOptions() {
             return {
-                balance: mainUser.balance,
-                transactionLimit: mainUser.transactionLimit,
-                key: mainUser.key
+                key,
+                balance,
+                transactionLimit,
+                historyLogs
             }
         },
-        putCredits(setBalance){
-            mainUser.balance += setBalance;
+        putCredits(money) {
+            balance += money;
+            const historyLog = {
+                operationType: 'Recieved Credits',
+                credits: money,
+                operationTime: new Date()
+            };
+            historyLogs.push(historyLog);
         },
-        takeCredits(getCash){
-            if(getCash <= mainUser.balance && getCash <= mainUser.transactionLimit){
-                return mainUser.balance -= getCash;
+        takeCredits(takeMoney) {
+            if (balance >= takeMoney && takeMoney <= transactionLimit) {
+                balance -= takeMoney;
             } else {
-                console.log('Error!');
+                console.error('poipoi!');
             }
+            const historyLog = {
+                operationType: 'Output Credits',
+                credits: takeMoney,
+                operationTime: new Date()
+            };
+            historyLogs.push(historyLog);
         },
-        setTransactionLimit(setTransactionLimit){
-            mainUser.transactionLimit = setTransactionLimit;
+        setTransactionLimit(setLimit) {
+            transactionLimit = setLimit;
+            const historyLog = {
+                operationType: 'Limit Change',
+                credits: setLimit,
+                operationTime: new Date()
+            };
+            historyLogs.push(historyLog);
         },
+        transferCredits(money, card) {
+            money += (money * 100) / 0.5;
+            if (balance >= money && money <= transactionLimit) {
+                balance -= money;
+                card.putCredits(money);
+            }
+        }
     }
 }
-let ret = userCard(4,500,0);
-ret.setTransactionLimit(100);
-ret.takeCredits(0);
+
+function UserAccount(name, cards = []) {
+    return {
+        name,
+        cards,
+        addCard() {
+            if (cards.length < 3) {
+                cards.push(userCard(cards.length + 1));
+            }
+        },
+        getCardByKey(id) {
+            if (id > 0 && id <= 3 && cards.length <= 3) {
+                return cards[id-1];
+            }
+        }
+    }
+}
+
+// let user1 = UserAccount('Vasya');
+// user1.addCard();
+// user1.addCard();
+//
+// let card1 = user1.getCardByKey(1);
+// let card2 = user1.getCardByKey(2);
+//
+// card1.putCredits(500);
+// card1.setTransactionLimit(800);
+// card1.transferCredits(300,card2);
+//
+// card2.takeCredits(0);
+//
+// console.log(card1.getCardOptions());
