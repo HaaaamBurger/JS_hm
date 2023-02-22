@@ -78,6 +78,32 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 //----------------------------------------------------------------------------------------------------------------------
+// function CarCreator(model,producer,data,speed,capacity){
+//     this.model = model;
+//     this.producer = producer;
+//     this.data = data;
+//     this.speed = speed;
+//     this.capacity = capacity;
+//     this.drive = function (){
+//         console.log(`Їдемо зі швідкистю ${this.speed}`);
+//     }
+//     this.info = function (){
+//         console.log(this);
+//     }
+//     this.increaseMaxSpeed = function (newSpeed){
+//         this.speed = newSpeed;
+//     }
+//     this.changeYear = function (newValue){
+//         this.data = newValue;
+//     }
+//     this.addDriver = function (driver){
+//         this.driver = driver;
+//     }
+// }
+// let newCar = new CarCreator('Model X','Tesla','2019','240','80Kw');
+// newCar.addDriver({name:'Biceps',age: 90});
+// console.log(newCar);
+//----------------------------------------------------------------------------------------------------------------------
 // class CarObject{
 //     constructor(model,producer,data,speed,engineCapacity) {
 //         this.model = model;
@@ -105,4 +131,28 @@
 // let newCar = new CarObject('Model X','Tesla','2019','240','Electric');
 // newCar.addDriver({name:'Alex',age: 19})
 // console.log(newCar);
+//----------------------------------------------------------------------------------------------------------------------
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+//----------------------------------------------------------------------------------------------------------------------
+class Popelushka{
+    constructor(name,age,legSize) {
+        this.name = name;
+        this.age = age;
+        this.legSize = legSize;
+    }
+}
+let pop1 = new Popelushka('Popelushka',25,38);
+let pop2 = new Popelushka('Popelushka',25,38);
+let pop3 = new Popelushka('Popelushka',25,38);
+let pop4 = new Popelushka('Popelushka',25,38);
+let pop5 = new Popelushka('Popelushka',25,38);
+let pop6 = new Popelushka('Popelushka',25,38);
+let pop7 = new Popelushka('Popelushka',25,38);
+let pop8 = new Popelushka('Popelushka',25,38);
+let pop9 = new Popelushka('Popelushka',25,38);
+let pop10 = new Popelushka('Popelushka',25,38);
+
 //----------------------------------------------------------------------------------------------------------------------
