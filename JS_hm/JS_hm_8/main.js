@@ -137,22 +137,37 @@
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 //----------------------------------------------------------------------------------------------------------------------
-class Popelushka{
-    constructor(name,age,legSize) {
+class CinderellaCreator {
+    constructor(name, age, legSize) {
         this.name = name;
         this.age = age;
         this.legSize = legSize;
     }
 }
-let pop1 = new Popelushka('Popelushka',25,38);
-let pop2 = new Popelushka('Popelushka',25,38);
-let pop3 = new Popelushka('Popelushka',25,38);
-let pop4 = new Popelushka('Popelushka',25,38);
-let pop5 = new Popelushka('Popelushka',25,38);
-let pop6 = new Popelushka('Popelushka',25,38);
-let pop7 = new Popelushka('Popelushka',25,38);
-let pop8 = new Popelushka('Popelushka',25,38);
-let pop9 = new Popelushka('Popelushka',25,38);
-let pop10 = new Popelushka('Popelushka',25,38);
 
+let pop1 = new CinderellaCreator('Cinderella', 25, 38);
+let pop2 = new CinderellaCreator('Cinderella', 21, 31);
+let pop3 = new CinderellaCreator('Cinderella', 19, 29);
+let pop4 = new CinderellaCreator('Cinderella', 28, 30);
+let pop5 = new CinderellaCreator('Cinderella', 27, 39);
+let pop6 = new CinderellaCreator('Cinderella', 30, 41);
+let pop7 = new CinderellaCreator('Cinderella', 20, 35);
+let pop8 = new CinderellaCreator('Cinderella', 24, 32);
+let pop9 = new CinderellaCreator('Cinderella', 26, 37);
+let pop10 = new CinderellaCreator('Cinderella', 23, 34);
+let CinderellaArray = [pop1, pop2, pop3, pop4, pop5, pop6, pop7, pop8, pop9, pop10];
+
+class Prince extends CinderellaCreator {
+    constructor(name, age, footSize) {
+        super(name, age);
+        this.footSize = footSize;
+    }
+}
+let prince = new Prince('Prince', 26, 32);
+// // for(let item of CinderellaArray){
+// //     if(item.legSize === prince.footSize){
+// //         console.log(item);
+// //     }
+// // }
+let findCinderelle = CinderellaArray.find(value => value.legSize === prince.footSize);
 //----------------------------------------------------------------------------------------------------------------------
