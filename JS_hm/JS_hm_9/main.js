@@ -40,18 +40,24 @@ let simpsons = [
 //Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
 //----------------------------------------------------------------------------------------------------------------------
-// for (let member of simpsons) {
-//     let divSimpsons = document.createElement('div');
-//     divSimpsons.classList.add('member');
-//
-//     let p = document.createElement('p');
-//     p.innerText = (`${member.name}, ${member.surname}, ${member.age}, ${member.info}`);
-//
-//     let img = document.createElement('img');
-//     img.src = member.photo;
-//
-//     divSimpsons.append(p,img);
-//     document.body.appendChild(divSimpsons);
-// }
-//----------------------------------------------------------------------------------------------------------------------
+simpsons.forEach(member => {
+    let div = document.createElement('div');
+    div.classList = 'member';
 
+    let h2 = document.createElement('h2');
+    h2.innerText = `${member.name} ${member.surname}`;
+
+    let img  =document.createElement('img');
+    img.src = member.photo;
+
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    let li1 = document.createElement('li');
+    li.innerText = `${member.name} ${member.surname}`;
+    li1.innerText = `${member.info}`;
+
+    ul.append(li,li1);
+    div.append(h2,ul,img);
+    document.body.appendChild(div);
+});
+//----------------------------------------------------------------------------------------------------------------------
