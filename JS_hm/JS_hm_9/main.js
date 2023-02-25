@@ -66,98 +66,119 @@
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
 //----------------------------------------------------------------------------------------------------------------------
-let coursesArray = [
-    {
-        title: 'JavaScript Complex',
-        monthDuration: 5,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-    },
-    {
-        title: 'Java Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
-    },
-    {
-        title: 'Python Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
-    },
-    {
-        title: 'QA Complex',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-    },
-    {
-        title: 'FullStack',
-        monthDuration: 7,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js', 'python', 'java']
-    },
-    {
-        title: 'Frontend',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-    }
-];
-for (let course of coursesArray) {
-    let wrapper = document.createElement('div');
-    wrapper.classList.add('wrapper');
-    wrapper.style.cssText = 'padding: 10px;border: 5px solid red;margin-bottom: 10px';
-
-    let mainTitle = document.createElement('h2');
-    mainTitle.innerText = course.title;
-    mainTitle.style.cssText = 'text-align: center;margin: 0;border: 5px solid blue';
-
-    let preInfo = document.createElement('div');
-    preInfo.classList.add('preInfo');
-    preInfo.style.cssText = 'display: flex;margin-top: 10px;text-align: center';
-
-    let monthDuration = document.createElement('div');
-    monthDuration.classList.add('monthDuration');
-    monthDuration.innerText = course.monthDuration;
-    monthDuration.style.cssText = 'margin-right: 10px;width: 25%;border: 5px solid blue';
-
-    let hourDuration = document.createElement('div');
-    hourDuration.classList.add('hourDuration');
-    hourDuration.innerText = course.hourDuration
-    hourDuration.style.cssText = 'width: 75%;border: 5px solid blue';
-
-    let content = document.createElement('div');
-    content.classList.add('content');
-    content.style.cssText = 'padding: 10px;text-align: center;margin-top: 10px;border: 5px solid blue';
-
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let p3 = document.createElement('p');
-    p1.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
-    p2.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
-    p3.style.cssText = 'margin: 0;border: 5px solid blue';
-
-    p1.innerText = course.modules[0];
-    p2.innerText = course.modules[1];
-    p3.innerText = course.modules[2];
-    content.append(p1, p2, p3);
-
-    preInfo.append(monthDuration, hourDuration);
-
-    let ul = document.createElement('ul');
-    for (let i = 3; i < course.modules.length; i++) {
-        let li = document.createElement('li');
-        li.innerText = course.modules[i];
-        ul.appendChild(li);
-    }
-
-    wrapper.append(mainTitle, preInfo, content, ul);
-
-    document.body.appendChild(wrapper);
-}
+// let coursesArray = [
+//     {
+//         title: 'JavaScript Complex',
+//         monthDuration: 5,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//     },
+//     {
+//         title: 'Java Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
+//     },
+//     {
+//         title: 'Python Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
+//     },
+//     {
+//         title: 'QA Complex',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//     },
+//     {
+//         title: 'FullStack',
+//         monthDuration: 7,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js', 'python', 'java']
+//     },
+//     {
+//         title: 'Frontend',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//     }
+// ];
+// for (let course of coursesArray) {
+//     let wrapper = document.createElement('div');
+//     wrapper.classList.add('wrapper');
+//     wrapper.style.cssText = 'padding: 10px;border: 5px solid red;margin-bottom: 10px';
+//
+//     let mainTitle = document.createElement('h2');
+//     mainTitle.innerText = course.title;
+//     mainTitle.style.cssText = 'text-align: center;margin: 0;border: 5px solid blue';
+//
+//     let preInfo = document.createElement('div');
+//     preInfo.classList.add('preInfo');
+//     preInfo.style.cssText = 'display: flex;margin-top: 10px;text-align: center';
+//
+//     let monthDuration = document.createElement('div');
+//     monthDuration.classList.add('monthDuration');
+//     monthDuration.innerText = course.monthDuration;
+//     monthDuration.style.cssText = 'margin-right: 10px;width: 25%;border: 5px solid blue';
+//
+//     let hourDuration = document.createElement('div');
+//     hourDuration.classList.add('hourDuration');
+//     hourDuration.innerText = course.hourDuration
+//     hourDuration.style.cssText = 'width: 75%;border: 5px solid blue';
+//
+//     let content = document.createElement('div');
+//     content.classList.add('content');
+//     content.style.cssText = 'padding: 10px;text-align: center;margin-top: 10px;border: 5px solid blue';
+//
+//     let p1 = document.createElement('p');
+//     let p2 = document.createElement('p');
+//     let p3 = document.createElement('p');
+//     p1.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
+//     p2.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
+//     p3.style.cssText = 'margin: 0;border: 5px solid blue';
+//
+//     p1.innerText = course.modules[0];
+//     p2.innerText = course.modules[1];
+//     p3.innerText = course.modules[2];
+//     content.append(p1, p2, p3);
+//
+//     preInfo.append(monthDuration, hourDuration);
+//
+//     let ul = document.createElement('ul');
+//     for (let i = 3; i < course.modules.length; i++) {
+//         let li = document.createElement('li');
+//         li.innerText = course.modules[i];
+//         ul.appendChild(li);
+//     }
+//
+//     wrapper.append(mainTitle, preInfo, content, ul);
+//
+//     document.body.appendChild(wrapper);
+// }
 //----------------------------------------------------------------------------------------------------------------------
-
+// - створити блок,
+// - додати йому класи wrap, collapse, alpha, beta
+// - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
+// - додати цей блок в body.
+// - клонувати його повністю, та додати клон в body.
 //----------------------------------------------------------------------------------------------------------------------
-
+// let wrapper = document.createElement('div');
+// wrapper.classList.add('wrap','collapse','alpha','beta');
+// wrapper.style.cssText = 'background-color: crimson;color: orange;font-size: 20px';
+// let cloneWrapper = wrapper.cloneNode(true);
+// document.body.append(wrapper,cloneWrapper);
+//----------------------------------------------------------------------------------------------------------------------
+// - Є масив:
+//     ['Main','Products','About us','Contacts']
+// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
+// Завдання робити через цикли.
+//----------------------------------------------------------------------------------------------------------------------
+// let main = ['Main','Products','About us','Contacts'];
+// for(let item of main){
+//     let li = document.createElement('li');
+//     li.innerText = item;
+//     let ul = document.getElementsByTagName('ul')[0];
+//     ul.appendChild(li);
+// }
 //----------------------------------------------------------------------------------------------------------------------
