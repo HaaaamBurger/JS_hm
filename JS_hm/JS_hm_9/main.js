@@ -106,7 +106,7 @@ let coursesArray = [
 ];
 for (let course of coursesArray) {
     let wrapper = document.createElement('div');
-    wrapper.classList = 'wrapper';
+    wrapper.classList.add('wrapper');
     wrapper.style.cssText = 'padding: 10px;border: 5px solid red;margin-bottom: 10px';
 
     let mainTitle = document.createElement('h2');
@@ -114,21 +114,21 @@ for (let course of coursesArray) {
     mainTitle.style.cssText = 'text-align: center;margin: 0;border: 5px solid blue';
 
     let preInfo = document.createElement('div');
-    preInfo.classList = 'preInfo';
+    preInfo.classList.add('preInfo');
     preInfo.style.cssText = 'display: flex;margin-top: 10px;text-align: center';
 
     let monthDuration = document.createElement('div');
-    monthDuration.classList = 'monthDuration';
+    monthDuration.classList.add('monthDuration');
     monthDuration.innerText = course.monthDuration;
     monthDuration.style.cssText = 'margin-right: 10px;width: 25%;border: 5px solid blue';
 
     let hourDuration = document.createElement('div');
-    hourDuration.classList = 'hourDuration';
+    hourDuration.classList.add('hourDuration');
     hourDuration.innerText = course.hourDuration
     hourDuration.style.cssText = 'width: 75%;border: 5px solid blue';
 
     let content = document.createElement('div');
-    content.classList = 'content';
+    content.classList.add('content');
     content.style.cssText = 'padding: 10px;text-align: center;margin-top: 10px;border: 5px solid blue';
 
     let p1 = document.createElement('p');
