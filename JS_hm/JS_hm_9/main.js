@@ -107,29 +107,37 @@ let coursesArray = [
 for (let course of coursesArray) {
     let wrapper = document.createElement('div');
     wrapper.classList = 'wrapper';
+    wrapper.style.cssText = 'padding: 10px;border: 5px solid red;margin-bottom: 10px';
 
     let mainTitle = document.createElement('h2');
     mainTitle.innerText = course.title;
+    mainTitle.style.cssText = 'text-align: center;margin: 0;border: 5px solid blue';
 
     let preInfo = document.createElement('div');
     preInfo.classList = 'preInfo';
-    preInfo.style.display = 'flex';
+    preInfo.style.cssText = 'display: flex;margin-top: 10px;text-align: center';
 
     let monthDuration = document.createElement('div');
     monthDuration.classList = 'monthDuration';
     monthDuration.innerText = course.monthDuration;
+    monthDuration.style.cssText = 'margin-right: 10px;width: 25%;border: 5px solid blue';
 
     let hourDuration = document.createElement('div');
     hourDuration.classList = 'hourDuration';
     hourDuration.innerText = course.hourDuration
-    hourDuration.style.marginLeft = '20px';
+    hourDuration.style.cssText = 'width: 75%;border: 5px solid blue';
 
     let content = document.createElement('div');
     content.classList = 'content';
+    content.style.cssText = 'padding: 10px;text-align: center;margin-top: 10px;border: 5px solid blue';
 
     let p1 = document.createElement('p');
     let p2 = document.createElement('p');
     let p3 = document.createElement('p');
+    p1.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
+    p2.style.cssText = 'margin: 0 0 10px 0;border: 5px solid blue';
+    p3.style.cssText = 'margin: 0;border: 5px solid blue';
+
     p1.innerText = course.modules[0];
     p2.innerText = course.modules[1];
     p3.innerText = course.modules[2];
@@ -148,4 +156,8 @@ for (let course of coursesArray) {
 
     document.body.appendChild(wrapper);
 }
+//----------------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------------------
+
 //----------------------------------------------------------------------------------------------------------------------
