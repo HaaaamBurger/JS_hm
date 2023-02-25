@@ -137,7 +137,15 @@ for (let course of coursesArray) {
 
     preInfo.append(monthDuration, hourDuration);
 
-    wrapper.append(mainTitle, preInfo, content);
+    let ul = document.createElement('ul');
+    for (let i = 3; i < course.modules.length; i++) {
+        let li = document.createElement('li');
+        li.innerText = course.modules[i];
+        ul.appendChild(li);
+    }
+
+    wrapper.append(mainTitle, preInfo, content, ul);
+
     document.body.appendChild(wrapper);
 }
 //----------------------------------------------------------------------------------------------------------------------
