@@ -282,5 +282,33 @@ let coursesAndDurationArray = [
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 //----------------------------------------------------------------------------------------------------------------------
+let form1 = document.forms.f2;
+form1.onsubmit = function (eventObject) {
+    eventObject.preventDefault();
 
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('wrapper');
+
+    let userLines = this.tableLines.value;
+    let userCells = this.tableCell.value;
+    let userText = this.tableObject.value;
+
+    if (userLines !== 0 && userText !== '') {
+        for (let i = 0; i < userLines; i++) {
+
+            let div = document.createElement('div');
+            div.style.display = 'flex';
+
+            for (let j = 0; j < userCells; j++) {
+                let p = document.createElement('p');
+                p.innerText = userText;
+                p.style.cssText = 'padding:5px;margin-left:5px;border: 2px solid black';
+                div.appendChild(p);
+            }
+
+            wrapper.appendChild(div);
+            document.body.appendChild(wrapper);
+        }
+    }
+}
 //----------------------------------------------------------------------------------------------------------------------
