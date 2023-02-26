@@ -182,3 +182,83 @@
 //     ul.appendChild(li);
 // }
 //----------------------------------------------------------------------------------------------------------------------
+/*- Є масив
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+Завдання робити через цикли.*/
+//----------------------------------------------------------------------------------------------------------------------
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// for(let coursesItem of coursesAndDurationArray){
+//     let div = document.createElement('div');
+//     div.style.display = 'flex';
+//
+//     let pInfo = document.createElement('p');
+//     pInfo.innerText = coursesItem.title;
+//     pInfo.style.marginRight = '10px';
+//
+//     let pDuration = document.createElement('p');
+//     pDuration.innerText = coursesItem.monthDuration;
+//
+//     let duration = coursesItem.monthDuration;
+//     div.append(pInfo,pDuration);
+//     document.body.appendChild(div);
+// }
+//----------------------------------------------------------------------------------------------------------------------
+// - Є масив
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+//     Завдання робити через цикли.
+//----------------------------------------------------------------------------------------------------------------------
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// for (let coursesElement of coursesAndDurationArray) {
+//     let div = document.createElement('div');
+//     div.classList.add('item');
+//
+//     let h1 = document.createElement('h1');
+//     h1.classList.add('heading');
+//     h1.innerText = coursesElement.title;
+//
+//     let p = document.createElement('p');
+//     p.classList.add('description');
+//     p.innerText = coursesElement.monthDuration;
+//
+//     div.append(h1,p);
+//     document.body.appendChild(div);
+// }
+//----------------------------------------------------------------------------------------------------------------------
+// - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
+//----------------------------------------------------------------------------------------------------------------------
+// let button = document.getElementsByTagName('button')[0];
+// let id = document.getElementsByTagName('p')[0];
+// id.getAttribute('id');
+// button.onclick = function (){
+// }
+//----------------------------------------------------------------------------------------------------------------------
