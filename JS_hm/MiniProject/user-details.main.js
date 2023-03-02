@@ -6,12 +6,22 @@ document.body.appendChild(mainContent);
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then((response) => response.json())
     .then(userData => {
-        let userBlock = document.createElement('div');
-        let userInfo = document.createElement('p');
-        userInfo.innerText = JSON.stringify(userData);
+        // let userBlock = document.createElement('div');
+        // let userInfo = document.createElement('p');
+        // userInfo.innerText = JSON.stringify(userData);
+        //
+        // userBlock.appendChild(userInfo);
+        // mainContent.append(userBlock);
+        for (const prop in userData) {
+            if (typeof userData[prop] === 'object') {
+                for (const innerProp in userData[prop]) {
+                    console.log(`${innerProp}: ${userData[prop][innerProp]}`);
+                }
+            } else {
+                console.log(`${prop}: ${userData[prop]}`);
+            }
+        }
 
-        userBlock.appendChild(userInfo);
-        mainContent.append(userBlock);
     });
 
 let buttonContainer = document.createElement('div');
@@ -19,8 +29,8 @@ buttonContainer.style.cssText = 'width: 100%; display: flex; justify-content: ce
 document.body.appendChild(buttonContainer);
 
 let button = document.createElement('button');
-button.textContent = 'post of current user';
-button.style.width = '90%';
+button.textContent = 'Post of current user';
+button.style.cssText = 'width: 90%;height: 50px';
 buttonContainer.appendChild(button);
 
 let postContainer = document.createElement('div');
@@ -29,7 +39,7 @@ button.onclick = function () {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         .then((response) => response.json())
         .then((userTitle) => {
-            for(let title of userTitle){
+            for (let title of userTitle) {
                 let postWrapper = document.createElement('div');
                 postWrapper.style.cssText = 'padding: 10px;box-sizing: box;align-items: center';
                 let p = document.createElement('p');
@@ -41,7 +51,7 @@ button.onclick = function () {
                 postButton.onclick = function () {
                     document.location = `post-info.html?userId=${title.id}`;
                 }
-                postWrapper.append(p,postButton);
+                postWrapper.append(p, postButton);
                 postContainer.append(postWrapper);
                 document.body.appendChild(postContainer);
             }

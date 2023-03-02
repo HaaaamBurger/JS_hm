@@ -25,18 +25,16 @@
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response)=>response.json())
     .then((user)=>{
-
         let wrapper = document.createElement('div');
-
-
         for(let item of user) {
-            wrapper.style.cssText = 'column-count: 2;';
+            wrapper.style.cssText = 'column-count: 2;justify-items: center;text-align: center;column-gap: 10px';
             let content = document.createElement('div');
+            content.style.cssText = '';
             let p = document.createElement('p');
-            p.style.cssText = 'margin: 0px 0 0 10px';
+            p.style.cssText = 'margin: 0;';
 
             let button = document.createElement('button');
-            button.style.cssText = 'height: 30px';
+            button.style.cssText = 'height: 30px;width: 60%';
             button.innerText = 'More Info';
             button.onclick = function (){
                 document.location = `user-details.html?id=${item.id}`;
