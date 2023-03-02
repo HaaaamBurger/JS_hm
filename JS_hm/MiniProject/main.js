@@ -9,9 +9,9 @@
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 // 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
-//     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
+//     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку user-details.html, котра має детальну інфу про поточний пост.
 //
-//     На странице post-details.html:
+//     На странице user-details.html:
 // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
 // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
 //
@@ -19,32 +19,34 @@
 // index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.
 //     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.
 //     блоки з короткою іфною про post - в ряд по 5 .
-//     post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.
+//     user-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.
 //     Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд)
 //----------------------------------------------------------------------------------------------------------------------
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response)=>response.json())
     .then((user)=>{
-        for(let item of user) {
-            let wrapper = document.createElement('div');
-            wrapper.style.cssText = 'display: flex;align-items: center';
 
-            let ul = document.createElement('ul');
-            let li = document.createElement('li');
-            li.style.marginRight = '10px';
+        let wrapper = document.createElement('div');
+
+
+        for(let item of user) {
+            wrapper.style.cssText = 'column-count: 2;';
+            let content = document.createElement('div');
+            let p = document.createElement('p');
+            p.style.cssText = 'margin: 0px 0 0 10px';
 
             let button = document.createElement('button');
             button.style.cssText = 'height: 30px';
             button.innerText = 'More Info';
             button.onclick = function (){
-                document.location = `post-details.html?id=${item.id}`;
+                document.location = `user-details.html?id=${item.id}`;
             }
 
-            li.innerText = `${item.id} - ${item.name}`;
+            p.innerText = `${item.id} - ${item.name}`;
 
-            ul.appendChild(li);
-            wrapper.append(ul,button);
-            document.body.appendChild(wrapper);
+            content.append(p,button);
+            wrapper.appendChild(content);
         }
+        document.body.appendChild(wrapper);
     });
 //----------------------------------------------------------------------------------------------------------------------
