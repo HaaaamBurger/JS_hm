@@ -85,10 +85,22 @@ button.onclick = function () {
             //     postContainer.append(postWrapper);
             //     document.body.appendChild(postContainer);
             // }
-           for (let objectTitle of userTitle){
-               for(let fieldTitle in objectTitle){
+            let mainPost = document.createElement('div');
+            mainPost.style.cssText = 'display:flex;justify-content: center;margin-top: 50px;width: 100%;column-count: 5';
+            for (let objectTitle of userTitle) {
+                let postWrap = document.createElement('div');
+                postWrap.style.cssText = 'width: 200px;box-sizing: box;text-align: center';
+                let postButton = document.createElement('button');
+                let postTitle = document.createElement('p');
 
-               }
+                postTitle.innerText = objectTitle.title;
+                postButton.textContent = 'Post Info';
+                postButton.onclick = function () {
+                    document.location = `post-info.html?userId=${objectTitle.id}`;
+                }
+                postWrap.append(postTitle,postButton);
+                mainPost.append(postWrap);
             }
+            document.body.appendChild(mainPost);
         })
 }
